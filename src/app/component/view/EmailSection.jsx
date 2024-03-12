@@ -57,10 +57,10 @@ export const EmailSection = () => {
           try my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="github.com">
+          <Link href="https://github.com/chauruon">
             <Image src={'/github-icon.svg'} width={50} height={50} alt="Github Icon" />
           </Link>
-          <Link href="linkedin.com">
+          <Link href="https://www.linkedin.com/in/ruon-chau-1b64b0243/">
             <Image src={'/linkedin-icon.svg'} width={50} height={50} alt="Linkedin Icon" />
           </Link>
         </div>
