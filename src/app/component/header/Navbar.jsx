@@ -25,7 +25,7 @@ export const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
+    <nav className="fixed mx-auto border border-[#33353F] h-[60px] sm:h-[50px] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
       <div className={`flex flex-wrap items-center md:justify-end justify-between mx-auto px-4 h-[45px]`}>
         <div className='rounded-full bg-[#181818] w-[50px] h-[50px] mt-1 md:hidden relative'>
           <Link href={'/'}>
