@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "./NavLink";
+import { NavLink } from "../header/NavLink";
 
 const MenuOverlay = ({ links ,sidebar } ) => {
   console.log('links: ', typeof links);

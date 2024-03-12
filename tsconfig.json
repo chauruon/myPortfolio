@@ -21,6 +21,16 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/component/*.jsx", "src/app/component/MenuOverlay.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/component/*.jsx",
+  "src/app/component/view/MenuOverlay.jsx",
+  "src/app/component/view/AboutSection.jsx",
+  "src/app/component/view/HeroSection.jsx",
+  "src/app/component/view/AchievementsSection.jsx",
+  "src/app/component/view/ProjectsSection.jsx",
+  "src/app/component/header/Navbar.jsx",
+  "src/app/component/header/NavLink.jsx",
+  "src/app/component/items/ProjectCard.jsx",
+  "src/app/component/items/ProjectTag.jsx"
+],
   "exclude": ["node_modules"]
 }
