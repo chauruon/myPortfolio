@@ -30,9 +30,9 @@ export const HeroSection = () => {
             />
           </h1>
           <p className='text-[#ADB7BE] mb-6 text-base sm:text-lg lg:text-xl'>
-            Tôi là một kỹ sư phần mềm, đã có kinh nghiệm làm việc trong lĩnh vực này trong một thời gian dài 
-            và luôn hứng thú với việc tìm hiểu và áp dụng những công nghệ mới nhất 
-            để tạo ra các sản phẩm và dịch vụ phần mềm tốt nhất có thể.
+            I am a software engineer, with extensive experience working in this field for a 
+            long time and always interested in learning and applying the latest 
+            technologies to create the best possible software products and services
           </p>
           <div>
             <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 text-white'>

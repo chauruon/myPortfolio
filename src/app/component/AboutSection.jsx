@@ -50,14 +50,14 @@ export const AboutSection = () => {
         <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
           <h2 className='text-4xl font-bold text-white mb-4'>About me</h2>
           <p className='text-base lg:text-lg'>
-            Chuyên ngành chính của tôi chính lập trình di động, trên giảng đường 
-            tôi cũng có tham gia một số dự án với team về app mobile bằng ngôn ngữ Java.
-            Tại giảng đường ngôn ngữ chính được đào là Java.
-            <br/>&bull; Sau khi tốt nghiệp tôi vẫn theo app mobile về React Native tuy vậy tôi vẫn có thể xử lý 
-            khi app gặp vấn đề về native
-            <br/>&bull; Ngoài ra, tôi cũng mong muốn có cơ hội làm việc trong môi trường 
-          đa dạng và sáng tạo, nơi tôi có thể hợp tác với các đồng nghiệp có chung tinh 
-          thần và mục tiêu để đổi mới và tạo ra những sản phẩm phần mềm mang lại giá trị thực cho khách hàng và xã hội.
+            My main specialization is in mobile programming. On campus, I have also participated in several projects 
+            with teams working on mobile apps using Java language. 
+            Java is the primary language taught at the university
+            <br/>&bull; After graduation, I still pursue mobile app development using React Native. However, 
+              I am still capable of handling native issues when the app encounters them.
+            <br/>&bull; Furthermore, I also aspire to have the opportunity to work in a diverse and creative environment, 
+              where I can collaborate with like-minded colleagues 
+              who share the same spirit and goals to innovate and create software products that bring real value to customers and society.
           </p>
           <div className='flex flex-row mt-8'>
             <TabButton selectTab={() => handleTabChange("skills")} active={ tab === 'skills'}>
