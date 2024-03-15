@@ -20,15 +20,20 @@ export const POST = async (request: NextRequest ) => {
     const formData = await request.formData();
 
     let dynamicObj: DynamicObject = {};
+    let nameURL:String = "";
     formData.forEach((val,key)=>{
       if (val instanceof File) {
-        dynamicObj["file"] = `/download/${val.name}`;
+        nameURL = `/download/${unixTimeInMillis}-${val.name}`
+        dynamicObj["file"] = nameURL;
       }
     });
+    console.log('nameURL: ', nameURL);
     dynamicObj["create_at"] = unixTimeInMillis;
     dynamicObj["date"] = formattedDate;
 
-    const dir_file = `public/download/${unixTimeInMillis}-${dynamicObj.file}`;
+    const dir_file = `public${nameURL}`;
+    console.log('dir_file: ', dir_file);
+    console.log('dynamicObj: ', dynamicObj);
 
     if (!fs.existsSync(dir_file)){
       fs.createFile(dir_file);
