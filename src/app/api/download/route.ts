@@ -82,7 +82,7 @@ export const GET = async (req: Request) => {
 
 
 
-export const DeleteCV = async (req: Request,res: Response) => {
+export const DELETE = async (request: Request) => {
   try {
     // await DownloadCVModel.deleteMany();
     
