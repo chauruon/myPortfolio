@@ -4,6 +4,10 @@ import React from 'react'
 import { TypeAnimation } from 'react-type-animation';
 
 export const HeroSection = () => {
+
+  const DownloadFile = async () => {
+  }
+
   return (
     <section>
       <div className='grid grid-cols-1 sm:grid-cols-12'>
@@ -38,9 +42,11 @@ export const HeroSection = () => {
             <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 text-white'>
               Hire Me
             </button>
-            <button className='px-1 py-1 w-full sm:w-fit rounded-full sm:mt-auto mt-3 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-800 text-white '>
+            {/* <button className='px-1 py-1 w-full sm:w-fit rounded-full sm:mt-auto mt-3 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-800 text-white '>
               <span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>Download CV</span>
-            </button>
+            </button> */}
+
+            <button type="button" onClick={() => DownloadFile()}>Download CV</button>
           </div>
         </div>
         <div className='col-span-4 place-self-center mt-4 lg:mt-0'>
@@ -55,3 +61,33 @@ export const HeroSection = () => {
     </section>
   )
 }
+
+
+type GetParams = {
+  params: {
+    filename: string;
+  };
+};
+
+
+// export an async GET function. This is a convention in NextJS
+export async function GET(req: Request, { params }: GetParams) {
+  // filename for the file that the user is trying to download
+  const filename = params.filename;
+
+  // external file URL
+  const DUMMY_URL =
+    "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
+
+  // use fetch to get a response
+  const response = await fetch(DUMMY_URL);
+
+  // return a new response but use 'content-disposition' to suggest saving the file to the user's computer
+  return new Response(response.body, {
+    headers: {
+      ...response.headers, // copy the previous headers
+      "content-disposition": `attachment; filename="${filename}"`,
+    },
+  });
+}
+

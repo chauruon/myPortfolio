@@ -24,7 +24,7 @@
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/component/*.jsx",
   "src/app/component/view/MenuOverlay.jsx",
   "src/app/component/view/AboutSection.jsx",
-  "src/app/component/view/HeroSection.jsx",
+  "src/app/component/view/HeroSection.tsx",
   "src/app/component/view/AchievementsSection.jsx",
   "src/app/component/view/ProjectsSection.jsx",
   "src/app/component/header/Navbar.jsx",
