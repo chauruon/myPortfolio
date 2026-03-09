@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -10,7 +14,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "plugins": [
       {
@@ -18,19 +22,30 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "target": "ES2017"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/component/*.jsx",
-  "src/app/component/view/MenuOverlay.jsx",
-  "src/app/component/view/AboutSection.jsx",
-  "src/app/component/view/HeroSection.tsx",
-  "src/app/component/view/AchievementsSection.jsx",
-  "src/app/component/view/ProjectsSection.jsx",
-  "src/app/component/header/Navbar.jsx",
-  "src/app/component/header/NavLink.jsx",
-  "src/app/component/items/ProjectCard.jsx",
-  "src/app/component/items/ProjectTag.jsx"
-],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/component/*.jsx",
+    "src/app/component/view/MenuOverlay.jsx",
+    "src/app/component/view/AboutSection.jsx",
+    "src/app/component/view/HeroSection.tsx",
+    "src/app/component/view/AchievementsSection.jsx",
+    "src/app/component/view/ProjectsSection.jsx",
+    "src/app/component/header/Navbar.jsx",
+    "src/app/component/header/NavLink.jsx",
+    "src/app/component/items/ProjectCard.jsx",
+    "src/app/component/items/ProjectTag.jsx",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

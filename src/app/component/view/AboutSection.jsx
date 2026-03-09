@@ -16,6 +16,7 @@ const TAB_DATA = [
         <li>Reactjs</li>
         <li>React Native</li>
         <li>PHP-Laravel</li>
+        <li>Dart(Learning)</li>
         <li>NextJs (Learning)</li>
       </ul>
     ),

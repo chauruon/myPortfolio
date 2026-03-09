@@ -1,13 +1,32 @@
 "use client"
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import { TypeAnimation } from 'react-type-animation';
 
 export const HeroSection = () => {
 
-  const DownloadFile = async () => {
-  }
+  const handleDownload = async () => {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/download`);
 
+    const data = await res.json();
+    const fileUrl = data.file.url;
+
+    const response = await fetch(fileUrl);
+    console.log("🚀 ~ handleDownload ~ response:", response)
+    const blob = await response.blob();
+
+    const url = window.URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "Junior_Frontend_ChauRuon.pdf";
+    a.click();
+
+    window.URL.revokeObjectURL(url);
+  };
+
+
+  
   return (
     <section>
       <div className='grid grid-cols-1 sm:grid-cols-12'>
@@ -42,7 +61,7 @@ export const HeroSection = () => {
             <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 text-white'>
               Hire Me
             </button>
-            <button className='px-1 py-1 w-full sm:w-fit rounded-full sm:mt-auto mt-3 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-800 text-white '>
+            <button onClick={handleDownload} className='px-1 py-1 w-full sm:w-fit rounded-full sm:mt-auto mt-3 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-800 text-white '>
               <span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>Download CV</span>
             </button>
 
